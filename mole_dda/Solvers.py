@@ -15,6 +15,7 @@ class Solver(object):
             self.E_inc = scipy.linalg.solve(self.SGreenTensor, self.E_0i)
             if (return_f == True):
                 return self.E_inc
+
         elif(lib == 'tensorflow'):
             print("Solver using tensorflow.")
             self.SGreen_Tensor_tf = tf.constant(self.SGreenTensor)
