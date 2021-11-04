@@ -1,0 +1,83 @@
+Under Development:
+
+INCOMPLETE DONE 1 - Implementation of the Forces (my analytical eq., numerical dG, compare). NOT COMPARED WITH ANY PAPER.
+1.1 - Parallelize the calculation.
+
+2 - Test the Emission case and parallelize it.
+2.1 - Powers for emission must be written in parallel.
+
+3 - Verify that the magnitude of the fields is take into account.
+
+4 - Implement CUDA solver. See my example in coding folder (Google Drive).
+
+5 - Transport with the code the library of Bessel functions or implement directly the a1 and b1.
+
+6 - Implement dynamic solver, without load A.
+
+7 - VERY LOW PRIORITY - Eliminate the duplication of the vectors in the projection, forces. &eq.X
+
+8 - VERY LOW PRIORITY - I CANNOT REMEMBER THE REASON FOR THAT. Change syntax of the projections the the main code.
+
+9 - Implement the Vincenzo polarizability: http://iopscience.iop.org/article/10.1088/1367-2630/15/6/063013/pdf
+
+10 - Introduce SP polarization.
+
+11 - Insert a far field evaluation function.
+
+12 - If folder "results" or whatever doesn't exist, return an error.
+
+13 - Equilibrate all outputs, i.e. create a standard with standard errors.
+
+14 - In emission, there was a problem with the absorption. For some reason, the abs_power was not initiated. Confirm that it is correct.
+
+15 - If the initial wavelength is bigger than the final wavelength, returns a warning and stop the program.
+
+A - coreDDA modification - Implement a substrate.
+
+__________________________
+version 1.0.15.a - 29/02/2016
+
+1 - Implementation of the Forces (my analytical eq., numerical dG, compare).
+1.1 - Implemented. Compared the numeric with the analytic expression. NOT COMPARED WITH ANY PAPER.
+1.2 - Included the planar wave equation term. Done
+
+2 - Include a way to include the analytical gold to the material internal list. The reserved word is Meyer_gold. Reserved word "resonant" to resonant particles.
+
+3 - Output corrected. All files now present the coordinates of the evaluated quantity. All files present headers.
+
+__________________________
+version 1.0.12.a - 5/11/2015
+means: fundamental core version (1), (0) modifications in the coreDDA of the program, (12) modifications/incrementations, (a) incomplete points
+
+6 - Return an error if the material doesn’t exist.
+
+7 - Load structure error warning and terminate program.
+
+8 - Implemented multiple switches. sections; fields; polarizations; projections; forces;
+
+9 - Load a file with x y z points and evaluate the field. Load multiple points.
+9.1 Do it in parallel. HOW TO: http://stackoverflow.com/questions/20413995/reducing-on-array-in-openmp
+
+10 - Create a .h with the solver(). NO EXTRA MEMORY ALLOCATION
+
+11 - Test if the counter of lines is correct (doesn’t count blank lines).
+11.1 - OK for the positions.
+11.2 - OK for materials.
+11.3 - OK for positions where the field must be evaluated?
+
+12 - Every output file should indicate the polarization by _(?)pol.dat
+
+__________________________
+version 1.0.5 - 20/10/2015
+means: fundamental core version (1), (0) modifications in the coreDDA of the program, (5) modifications/incrementations
+
+1 - Load a file with x y z points and evaluate the field. Load multiple points.
+
+2 - Create a .h with the solver().
+
+3 - Create a switch to activate and deactivate the projections.
+
+4 - Cross Sections must be written in parallel.
+
+5 - Try to eliminate duplicated vector in sections. Example: *X
+__________________________

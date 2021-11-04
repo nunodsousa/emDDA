@@ -1,0 +1,11 @@
+SiMO	dielectric_eps/SiMO.dat
+silicon  dielectric_eps/Si.dat
+Si	dielectric_eps/Si.dat
+Au_ext  dielectric_eps/Au_ext.dat
+TiO2	dielectric_eps/TiO2.dat
+Au	dielectric_eps/Au_ext.dat
+Si_20C dielectric_eps/Si_20C.dat
+PMMA	dielectric_eps/PMMA.dat
+NaYF4 dielectric_eps/NaYF4.dat
+melamine dielectric_eps/melamine.dat
+Res	dielectric_eps/Res.dat

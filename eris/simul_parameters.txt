@@ -1,0 +1,25 @@
+1250	#initial lambda
+1700	#final lambda
+1	#number of steps
+1	#epsilon_0
+1	#epsilon_medium
+0	#0 for transport, 1 for emission
+0 	#ux incident wave direction (k_x)
+0	#uy incident wave direction (k_y)
+1	#uz incident wave direction (k_z)
+1	#electric field Amplitude
+0	#x position of the source
+0	#y position of the source
+0	#z position of the source
+3	#number of particles
+structure_files/two_particles.dat #path of the structure file.
+results/output_python_test	#output first word for output
+position_fields.txt	#input positions to evaluate the field
+1	#0 deactivate, 1 activate sections
+0	#0 deactivate, 1 activate particle fields
+0	#0 deactivate, 1 activate polarizations
+0	#0 deactivate, 1 activate projections
+0	#0 deactivate, 1 activate forces
+Direct	#method used: Direct or BiCStab
+120	#number of iterations (only for BiCStab)
+1e-9	#tolerance (only for BiCStab)

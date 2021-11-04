@@ -1,0 +1,27 @@
+#!/bin/bash
+cd $PBS_O_WORKDIR
+export LD_LIBRARY_PATH=/opt/lib64:/home/nsantos/libs/armadillo/lib:/opt/intel/composer_xe_2015.1.133/mkl/lib/intel64:/opt/intel/composer_xe_2015.1.133/compiler/lib/intel64
+export PATH=./:/opt/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/pbs/bin:/opt/pbs/lib/xpbs/bin:/opt/env-switcher/bin:/opt/intel/composer_xe_2015.1.133/bin/intel64:/opt/maui/bin:/opt/maui/sbin:/home/nsantos/bin
+MODULEPATH=/opt/env-switcher/share/env-switcher:/opt/modules/oscar-modulefiles:/opt/modules/version:/opt/modules/$MODULE_VERSION/modulefiles:/opt/modules/modulefiles
+
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo $PBS_O_WORKDIR
+echo This jobs runs on the following processors:
+echo `cat $PBS_NODEFILE`
+
+#! Counts the number of processors
+NPROCS=`wc -l < $PBS_NODEFILE`
+echo This job has allocated $NPROCS nodes
+
+export OMP_NUM_THREADS=48
+export MKL_NUM_THREADS=48
+export MKL_DOMAIN_NUM_THREADS=48
+
+path=$(pwd)
+program='/main'
+
+prg=$path$program
+
+$prg -t 8 $JOBNAME
