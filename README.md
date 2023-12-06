@@ -1,3 +1,9 @@
+# If you're using it...
+Please cite the paper:
+https://www.nature.com/articles/srep30803
+
+de Sousa, N., Froufe-Pérez, L., Sáenz, J. et al. Magneto-Optical Activity in High Index Dielectric Nanoantennas. Sci Rep 6, 30803 (2016). https://doi.org/10.1038/srep30803
+
 # How to install
 
 Using the terminal, we can use `pip to install the package. pip: `pip install git+https://github.com/nunodsousa/emDDA.git` . 
