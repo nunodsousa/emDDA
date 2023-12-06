@@ -1,3 +1,7 @@
+# How to use it
+This is a powerful program, easy to use. 
+You can check the DDA_main.py how to use it, and see a simple example. 
+
 # If you're using it...
 Please cite the paper:
 https://www.nature.com/articles/srep30803
